@@ -10,6 +10,8 @@
 
 //CODE HERE
 
+let myArr = [4, 'abc',['cat', 'dog', 'bird'], 77];
+
 
 ////////////////////PROBLEM 2////////////////////
 /*
@@ -20,7 +22,9 @@
 
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
-//CODE HERE
+//CODE HERE 
+
+let foundZ = nestedLetters[2, 1]
 
 
 ////////////////////PROBLEM 3////////////////////
@@ -38,6 +42,7 @@ const desert = ['rattlesnake', 'coyote']
 
 //CODE HERE
 
+const animals = [...forest, ...ocean, ...savannah, ...desert];
 
 /*
     Now use the spread operator to make a copy of your animals array.
@@ -46,6 +51,7 @@ const desert = ['rattlesnake', 'coyote']
 
 //CODE HERE
 
+const animalsCopy = [...animals, 'elephant'];
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -56,6 +62,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+
 
   
 ////////////////////PROBLEM 5////////////////////
@@ -68,6 +75,8 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+
+
   
   
 ////////////////////PROBLEM 6////////////////////
@@ -77,6 +86,7 @@ const desert = ['rattlesnake', 'coyote']
 
 //CODE HERE
   
+
 
 ////////////////////PROBLEM 7////////////////////
 
@@ -97,7 +107,8 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+
+delete gameInfo.rating;
 
 ////////////////////PROBLEM 8////////////////////
 
@@ -119,7 +130,9 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+ 
+
+
   
 ////////////////////PROBLEM 9////////////////////
 
@@ -195,6 +208,13 @@ let pairsArray = []
 
 //CODE HERE
 
+function Dog(name, age, breed, tricks) {
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.tricks = tricks;
+}
+
 
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
@@ -203,7 +223,13 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
+
+let fido = {
+    name: "Fido",
+    age: 3,
+    breed: "Jack Russell",
+    tricks: ["sit", "shake"],
+}
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -214,6 +240,10 @@ let pairsArray = []
 
 //CODE HERE
 
+function bark() {
+    return (this.name) + ('says bark!')
+}
+
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -221,7 +251,9 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
+
+let fidoSpeak = bark.call(fido);
+console.log(fidoSpeak);
   
 ////////////////////PROBLEM 13////////////////////
 /*
@@ -233,6 +265,9 @@ let pairsArray = []
 
 //CODE HERE
 
+function teachTrick(trick){
+
+}
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -271,6 +306,13 @@ let pairsArray = []
 
 //CODE HERE
 
+function Phone(brand, model, storage, color, sold) {
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.sold = sold;
+}
   
 /*
     Next make three new phones using your constructor function.
@@ -284,11 +326,29 @@ let pairsArray = []
 */
 
 //CODE HERE
-  // let phone1 = 
+  let phone1 = {
+      brand: 'iPhone',
+      model: '11s',
+      storage: 64,
+      color: 'black',
+      sold: false,
+  }
   
-  // let phone2 = 
+  let phone2 = {
+      brand: 'Samsung',
+      model: 'galaxy',
+      storage: 32, 
+      color: 'blue',
+      sold: false,
+  }
   
-  // let phone3 = 
+  let phone3 = {
+      brand: 'Google',
+      model: 'Pixel',
+      storage: 128,
+      color: 'gold',
+      sold: false,
+  }
   
 /*
     Last, add a prototype method to Phone.
@@ -299,5 +359,7 @@ let pairsArray = []
 */
 
 //CODE HERE
+
+
 
   

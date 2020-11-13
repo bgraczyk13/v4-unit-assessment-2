@@ -37,6 +37,9 @@ let foods = [
 
 //CODE HERE
 
+
+
+
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -82,6 +85,8 @@ const products = [
 
 //CODE HERE
 
+let saleProducts = products.map(price => price-(price*1.25));
+
 ////////////////////PROBLEM 3////////////////////
 /*
   A customer has placed an order - they want one of every product that has blue on it. 
@@ -91,6 +96,8 @@ const products = [
 */
 
 //CODE HERE
+
+
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -131,6 +138,8 @@ const shippingInfo = {
 
 //CODE HERE
 
+let helensInfo = Object.assign(contactInfo, shippingInfo);
+
 ////////////////////PROBLEM 6////////////////////
 /*
   Helen has a daughter named Ellen that lives at the same address.
@@ -140,12 +149,16 @@ const shippingInfo = {
 
 //CODE HERE
 
+let ellensInfo = {...helensInfo, name: 'Ellen', email: 'ellen@email.com'};
+
 ////////////////////PROBLEM 7////////////////////
 /* 
   Save Ellen's email to a new variable using destructuring.
 */
 
 //CODE HERE
+
+let {email} = ellensInfo;
 
 ////////////////////PROBLEM 8////////////////////
 /*
@@ -154,6 +167,8 @@ const shippingInfo = {
 */
 
 //CODE HERE
+
+let {zipCode, state} = shippingInfo;
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
@@ -217,6 +232,8 @@ const userInfo = {
 
 //CODE HERE
 
+let shouldAlert = userInfo.settings.alerts;
+
 ////////////////////PROBLEM 10////////////////////
 /*
   Set the value of topic below to the last item in gn@rly_c0der_007's topics array
@@ -225,6 +242,8 @@ const userInfo = {
 
 //CODE HERE
 
+let topic = userInfo.topics[3];
+
 ////////////////////PROBLEM 11////////////////////
 /*
   Set the value of commenterId below to the userId of the first response to 
@@ -232,6 +251,8 @@ const userInfo = {
 */
 
 //CODE HERE
+
+
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -251,6 +272,31 @@ const userInfo = {
 */
 
 //CODE HERE
+
+const person = {
+  name: 'Phil',
+  age: 29,
+  jobs: ['dentist', 'lawyer', 'accountant'],
+  birthday: function(){
+    alert(this.age + 1)
+  },
+  favorites: {
+    color: 'blue',
+    number: 7,
+    book: 'Harry Potter',
+  },
+  kids: [
+    {
+      name: 'Jack',
+      age: 8,
+    },
+    {
+      name: 'Clarke',
+      age: 6,
+    },
+  ], 
+  
+}
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -273,10 +319,8 @@ const workout = {
   },
 }
 
-//let context1 = myFunc
-//let context1 = window
-//let context1 = global
-// let context1 = workout
+
+let context1 = workout;
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -288,7 +332,6 @@ function myFunc() {
   return this
 }
 
-//let context2 = myFunc
-// let context2 = window
-//let context2 = global
-//let context2 = workout
+let context2 = window;
+
+
